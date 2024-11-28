@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Carrito extends Model
@@ -27,5 +28,5 @@ class Carrito extends Model
     {
         return $this->belongsToMany(Producto::class, 'carrito_producto')
                     ->withPivot('cantidad', 'subtotal');
-    } 
+    }
 }

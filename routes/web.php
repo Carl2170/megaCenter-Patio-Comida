@@ -23,9 +23,9 @@ Route::middleware([
     // Route::get('/dashboard', function () {
     //     return Inertia::render('Home');
     // })->name('dashboard');
-       Route::get('/dashboard',
-                 [UserController::class, 
-                 'redireccionarDashboard'])->name('dashboard');
+    Route::get('/dashboard',
+        [UserController::class, 
+        'redireccionarDashboard'])->name('dashboard');
 
 });
 
