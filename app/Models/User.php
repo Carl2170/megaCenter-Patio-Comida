@@ -68,6 +68,19 @@ class User extends Authenticatable
         ];
     }
 
+       // Relación uno a muchos con Pagos
+    public function pagos()
+    {
+        return $this->hasMany(Pago::class);
+    }
+
+    // Relación uno a muchos con Carritos
+    public function carritos()
+    {
+        return $this->hasMany(Carrito::class, 'consumidor_id');
+    }
+
+
     public function getRoleNames()
     {
         return $this->belongsToMany(Role::class);
